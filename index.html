@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="./index.css" />
+	<title>2020年长江三角洲</title>
+	<meta name="description" content="d3-voronoi-treemap plugin to remake 'The Costs of Being Fat, in Actual Dollars'">
+
+	<script src="./unit/json2.js"></script>
+	<script src="./unit/cycle.js"></script>
+	<script src="./js/dataJson.js"></script>
+
+	<script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
+	<script src="./unit/d3-weighted-voronoi.js"></script>
+	<script src="./unit/d3-voronoi-map.js"></script>
+	<script src="./unit/d3-voronoi-treemap.js"></script>
+	<script type="text/javascript" src="./index.js"></script>
+</head>
+<style>
+	/* canvas{
+		
+	} */
+</style>
+
+<body>
+	<div>
+		<header>
+			<div class="header"><span style="font-size: 22px;">2020年长江三角洲41市GDP足球图</span></div>
+		</header>
+		<div class="body">
+			<div class="body-map">
+				<!-- <svg style="display:block;margin:auto;background: transparent;"></svg> -->
+				<!-- <div class="body-con" id="body-con" style="width: 100%; height: 100%;"></div> -->
+				<div class="amap" style="width: 700px;position: relative;">
+					<svg style="display:block;margin:auto;background:transparent"></svg>
+					<div class="title-bg">
+						<div class="title-con">
+							<div style="padding: 0 7px;border-bottom: 1px solid #F72447;">
+								<p class="cir">上海大都市圈</p>
+								<h5><span>安徽省</span>
+									<p style="margin-left: 4px;">苏州市市</p>
+								</h5>
+							</div>
+							<div style="padding: 0 7px;">
+								<p style="color:#fff">GDP占比</p>
+								<h4><span>8.17</span>%</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="address">
+					<div id="triangle"></div>
+				</div>
+			</div>
+			<div class="call">
+				<div class="toogle">
+					<div class="left"><img src="./img/left.png" /></div>
+					<div class="right"><img src="./img/right.png" /></div>
+				</div>
+				<ul>
+					<li class="active li">GDP</li>
+					<li class="li">GDP增加值</li>
+					<li class="li">上市公司数量</li>
+					<li class="li">上市公司增长数</li>
+					<li class="li">社会消费品零售总额</li>
+					<li class="li">社会消费品零售总额增加值</li>
+					<li class="li">实际利用外资</li>
+					<li class="li">进出口总额</li>
+					<li class="li">固定资产投资额</li>
+					<li class="li">一般公共预算收入</li>
+				</ul>
+			</div>
+			<canvas id="animate" style="position: absolute; top: 0; z-index: -1;"></canvas>
+		</div>
+	</div>
+	<script src="./unit/animate.js"></script>
+	<script src="https://cdn.staticfile.org/echarts/4.5.0/echarts.min.js"></script>
+	<script src="./js/data.js"> </script>
+	<script src="./js/dataJson.js"> </script>
+	<script src="./js/address.js"> </script>
+	<script src="./index.js"> </script>
+	<script>
+		$(function () {
+			let num = 1
+			mapChart.amap(data1, dataLine)
+			$('.left').click(function () {
+				if (num > 0) {
+					num = num - 1
+					if (num == 1) {
+						$('header span').text('上海与全国主要城市间区域联动综合指数')
+					}
+					if (num == 2) {
+						$('header span').text('上海与全国主要城市间产业联系指数')
+					}
+					if (num == 3) {
+						$('header span').text('上海与全国主要城市间商贸联系指数')
+					}
+					if (num == 4) {
+						$('header span').text('上海与全国主要城市间创新合作指数')
+					}
+					if (num == 5) {
+						$('header span').text('上海与全国主要城市间社会关注指数')
+					}
+					if (num == 6) {
+						$('header span').text('上海与全国主要城市间人口流动指数')
+					}
+					if (num == 7) {
+						$('header span').text('上海与全国主要城市间教育合作指数')
+					}
+					if (num == 8) {
+						$('header span').text('上海与全国主要城市间政府合作指数')
+					}
+					$('ul li').removeClass("active")
+					$(`.li:eq(${num-1})`).addClass('active');
+				}
+			})
+
+			$('.right').click(function () {
+				if (num < 9) {
+					num = num + 1
+					if (num == 1) {
+						$('header span').text('上海与全国主要城市间区域联动综合指数')
+					}
+					if (num == 2) {
+						$('header span').text('上海与全国主要城市间产业联系指数')
+					}
+					if (num == 3) {
+						$('header span').text('上海与全国主要城市间商贸联系指数')
+					}
+					if (num == 4) {
+						$('header span').text('上海与全国主要城市间创新合作指数')
+					}
+					if (num == 5) {
+						$('header span').text('上海与全国主要城市间社会关注指数')
+					}
+					if (num == 6) {
+						$('header span').text('上海与全国主要城市间人口流动指数')
+					}
+					if (num == 7) {
+						$('header span').text('上海与全国主要城市间教育合作指数')
+					}
+					if (num == 8) {
+						$('header span').text('上海与全国主要城市间政府合作指数')
+					}
+					$('ul li').removeClass("active")
+					$(`.li:eq(${num-1})`).addClass('active');
+				}
+			})
+
+
+			$('ul li').click(function () {
+				$("ul li").removeClass("active");
+				$(this).addClass("active");
+				console.log($(this))
+
+				if ($(this).text() == "综合指数") {
+					num = 1
+					$('header span').text('上海与全国主要城市间区域联动综合指数')
+				}
+				if ($(this).text() == "产业联系") {
+					num = 2
+					$('header span').text('上海与全国主要城市间产业联系指数')
+				}
+				if ($(this).text() == "商贸联系") {
+					num = 3
+					$('header span').text('上海与全国主要城市间商贸联系指数')
+				}
+				if ($(this).text() == "创新合作") {
+					num = 4
+					$('header span').text('上海与全国主要城市间创新合作指数')
+				}
+				if ($(this).text() == "社会关注") {
+					num = 5
+					$('header span').text('上海与全国主要城市间社会关注指数')
+				}
+				if ($(this).text() == "人口流动") {
+					num = 6
+					$('header span').text('上海与全国主要城市间人口流动指数')
+				}
+				if ($(this).text() == "教育合作") {
+					num = 7
+					$('header span').text('上海与全国主要城市间教育合作指数')
+				}
+				if ($(this).text() == "政府合作") {
+					num = 8
+					$('header span').text('上海与全国主要城市间政府合作指数')
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>
