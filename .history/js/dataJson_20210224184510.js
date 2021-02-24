@@ -1621,7 +1621,7 @@ var dataLine2 = [{
                         "value": 0.44
                     }, {
                         "name": "铜陵市",
-                        "color": "rgba(121,155,208,1)",
+                        "color": "rgba(86,102,147,1)",
                         "border": "#2D589A",
                         "ring": "非都市圈城市",
                         "width": 0,
@@ -1647,14 +1647,14 @@ var dataLine2 = [{
                         "value": 1.33
                     }, {
                         "name": "阜阳市",
-                        "color": "rgba(86,102,147,1)",
+                        "color": "rgba(121,155,208,1)",
                         "border": "#2D589A",
                         "ring": "非都市圈城市",
                         "width": 0,
                         "value": 1.08
                     }, {
                         "name": "宿州市",
-                        "color": "rgba(121,155,208,1)",
+                        "color": "121,155,208",
                         "border": "#2D589A",
                         "ring": "非都市圈城市",
                         "width": 0,

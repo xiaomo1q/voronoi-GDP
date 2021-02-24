@@ -363,8 +363,22 @@ $(function () {
               normal: {
                 areaColor: {
                   image: imageDom, // 支持为 HTMLImageElement, HTMLCanvasElement，不支持路径字符串
-                  repeat: 'no-repeat', // 是否平铺，可以是 'repeat-x', 'repeat-y', 'no-repeat'
+                  repeat: 'repeat-y', // 是否平铺，可以是 'repeat-x', 'repeat-y', 'no-repeat'
                 },
+                // areaColor: "#061E3D",
+                // borderColor: {
+                //   x: 0,
+                //   y: 0,
+                //   x2: 0,
+                //   y2: 1,
+                //   colorStops: [{
+                //     offset: 0,
+                //     color: '#576B7B' // 0% 处的颜色
+                //   }, {
+                //     offset: 1,
+                //     color: '#2C414F' // 100% 处的颜色
+                //   }],
+                // },
                 borderColor: "rgba(130,198,255,1)",
                 borderWidth: 1,
                 borderRadius: 30,

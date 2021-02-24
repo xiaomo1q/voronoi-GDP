@@ -39,10 +39,6 @@ $(function () {
 
    var leaves;
    var menus = [];
-
-   var imageDom = document.createElement('img'); // 使用 DOM HTMLImageElement
-        // imageDom.src = 'http://39.106.255.75/siteimg/e195b1cbd888b6b983397c013047e3c.png';
-        imageDom.src = './img/s.png';
   mapChart = {
     amap: function (amapData, dataList) {
 
@@ -322,7 +318,9 @@ $(function () {
       }
       // 右边地图
       function addressMap(list, hover) {
-        
+        var imageDom = document.createElement('img'); // 使用 DOM HTMLImageElement
+        // imageDom.src = 'http://39.106.255.75/siteimg/e195b1cbd888b6b983397c013047e3c.png';
+        imageDom.src = './img/s.png';
         var myChart = echarts.init(document.getElementById('triangle'));
         echarts.registerMap('长三角', mapAdress);
         var series = [{
@@ -363,8 +361,22 @@ $(function () {
               normal: {
                 areaColor: {
                   image: imageDom, // 支持为 HTMLImageElement, HTMLCanvasElement，不支持路径字符串
-                  repeat: 'no-repeat', // 是否平铺，可以是 'repeat-x', 'repeat-y', 'no-repeat'
+                  repeat: 'repeat-y', // 是否平铺，可以是 'repeat-x', 'repeat-y', 'no-repeat'
                 },
+                // areaColor: "#061E3D",
+                // borderColor: {
+                //   x: 0,
+                //   y: 0,
+                //   x2: 0,
+                //   y2: 1,
+                //   colorStops: [{
+                //     offset: 0,
+                //     color: '#576B7B' // 0% 处的颜色
+                //   }, {
+                //     offset: 1,
+                //     color: '#2C414F' // 100% 处的颜色
+                //   }],
+                // },
                 borderColor: "rgba(130,198,255,1)",
                 borderWidth: 1,
                 borderRadius: 30,
