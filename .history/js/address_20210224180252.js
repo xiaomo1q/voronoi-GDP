@@ -6,11 +6,11 @@ var mapAdress = {
             "adcode": 310000,
             "name": "上海市",
             "center": [121.472644, 31.231706],
-            "centroid": [121.438734, 31.0256],
+            "centroid": [123.438734, 31.0256],
             "childrenNum": 16,
             "level": "province",
             "acroutes": [100000],
-            "cp": [122.92644, 31.231706],
+            "cp": [121.92644, 31.031706],
             "parent": {
                 "adcode": 100000
             }

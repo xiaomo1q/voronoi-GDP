@@ -339,6 +339,7 @@ $(function () {
                   shadowBlur: 10,
                   shadowColor: '#36B7FF',
                   opacity: 0.75,
+                  
                   textShadowColor: "#000",
                   textShadowBlur: 20,
                   textShadowOffsetX: 10,
@@ -349,7 +350,6 @@ $(function () {
                 show: true,
                 textStyle: {
                   color: "rgba(130,198,255,1)",
-                  // color: "#000",
                   shadowBlur: 10,
                   shadowColor: '#36B7FF',
                   opacity: 0.75,
@@ -440,6 +440,7 @@ $(function () {
               emphasis: {
                 areaColor: 'transparent', //悬浮区背景
                 borderColor: 'transparent',
+
               }
             }
           }],

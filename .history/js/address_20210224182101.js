@@ -10,7 +10,7 @@ var mapAdress = {
             "childrenNum": 16,
             "level": "province",
             "acroutes": [100000],
-            "cp": [122.92644, 31.231706],
+            "cp": [122.92644, 31.331706],
             "parent": {
                 "adcode": 100000
             }

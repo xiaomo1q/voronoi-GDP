@@ -19,6 +19,7 @@
 </style>
 
 <body>
+	<div class="content-load"><div class="loading"><p>loading</p><span></span></div></div>
 	<div class="vor" style="display:none">
 		<header>
 			<div class="header"><span style="font-size: 22px;">2020年长江三角洲41市GDP足球图</span></div>
@@ -68,8 +69,6 @@
 		</div>
 		<canvas id="animate" style="position: absolute; top: 0; z-index: -1;"></canvas>
 	</div>
-	
-	<div class="content-load"><div class="loading"><p>loading</p><span></span></div></div>
 	<!-- <script src="./unit/animate.js"></script> -->
 	<script src="./unit/bg-anim.js"></script>
 	<script src="https://cdn.staticfile.org/echarts/4.5.0/echarts.min.js"></script>
@@ -89,10 +88,8 @@
 				console.log(document.readyState)
 				if (document.readyState == 'complete') //当页面加载状态 
 				{
-					$('.content-load').hide()
 					$('.vor').show()
 				} else {
-					$('.content-load').show()
 					$('.vor').hide()
 				}
 			}

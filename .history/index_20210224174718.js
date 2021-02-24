@@ -426,6 +426,22 @@ $(function () {
             top: "5.5%",
             left: '14.4%',
             layoutSize: "100%",
+            label: {
+              normal: {
+                show: false,
+              },
+              emphasis: {
+                show: true,
+                textStyle: {
+                  // color: "rgba(130,198,255,1)",
+                  color: "#000",
+                  shadowBlur: 10,
+                  shadowColor: '#36B7FF',
+                  opacity: 0.75,
+                  fontSize: 16,
+                }
+              }
+            },
             itemStyle: {
               normal: {
                 areaColor: "transparent",

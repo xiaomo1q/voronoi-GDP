@@ -387,20 +387,21 @@ $(function () {
                 //   repeat: 'repeat-y', // 是否平铺，可以是 'repeat-x', 'repeat-y', 'no-repeat'
                 // },
                 borderColor: 'rgba(149,223,240,1)',
-                areaColor: {
-                  type: 'radial',
-                  x: 0.5,
-                  y: 0.5,
-                  r: 0.8,
-                  colorStops: [{
-                    offset: 0,
-                    color: 'rgba(102, 153, 193, 0)' // 0% 处的颜色
-                  }, {
-                    offset: 1,
-                    color: 'rgba(102, 153, 193, .4)' // 100% 处的颜色
-                  }],
-                  globalCoord: false // 缺省为 false
-                },
+                // areaColor: {
+                //   type: 'radial',
+                //   x: 0.5,
+                //   y: 0.5,
+                //   r: 0.8,
+                //   colorStops: [{
+                //     offset: 0,
+                //     color: 'rgba(102, 153, 193, 0)' // 0% 处的颜色
+                //   }, {
+                //     offset: 1,
+                //     color: 'rgba(102, 153, 193, .4)' // 100% 处的颜色
+                //   }],
+                //   globalCoord: false // 缺省为 false
+                // },
+                areaColor:"transparent",
                 shadowColor: 'rgba(128, 217, 248, 1)',
                 shadowOffsetX: -2,
                 shadowOffsetY: 2,
@@ -426,6 +427,24 @@ $(function () {
             top: "5.5%",
             left: '14.4%',
             layoutSize: "100%",
+            label: {
+              normal: {
+                show: true,
+                textStyle: {
+                  // color: "rgba(130,198,255,1)",
+                  color: "#000",
+                  fontSize: 10,
+                }
+              },
+              emphasis: {
+                show: true,
+                textStyle: {
+                  // color: "rgba(130,198,255,1)",
+                  color: "#000",
+                  fontSize: 18,
+                }
+              }
+            },
             itemStyle: {
               normal: {
                 areaColor: "transparent",

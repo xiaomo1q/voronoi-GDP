@@ -339,17 +339,17 @@ $(function () {
                   shadowBlur: 10,
                   shadowColor: '#36B7FF',
                   opacity: 0.75,
+                  
                   textShadowColor: "#000",
-                  textShadowBlur: 20,
-                  textShadowOffsetX: 10,
-                  textShadowOffsetY: 15
+                  textShadowBlur: 10,
+                  textShadowOffsetX: 0,
+                  textShadowOffsetY: 5
                 }
               },
               emphasis: {
                 show: true,
                 textStyle: {
                   color: "rgba(130,198,255,1)",
-                  // color: "#000",
                   shadowBlur: 10,
                   shadowColor: '#36B7FF',
                   opacity: 0.75,
@@ -377,7 +377,7 @@ $(function () {
                 //     color: '#2C414F' // 100% 处的颜色
                 //   }],
                 // },
-                // borderColor: "rgba(130,198,255,1)",
+                borderColor: "rgba(130,198,255,1)",
                 borderWidth: 1,
                 borderRadius: 30,
               },
@@ -440,6 +440,7 @@ $(function () {
               emphasis: {
                 areaColor: 'transparent', //悬浮区背景
                 borderColor: 'transparent',
+
               }
             }
           }],

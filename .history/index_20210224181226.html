@@ -55,12 +55,12 @@
 				<ul>
 					<li class="active li">GDP</li>
 					<li class="li">上市公司数量</li>
-					<li class="li" style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额</li>
+					<li class="li" style="grid-column: 3/5;background: url('./img/select.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额</li>
 					<li class="li">实际利用外资</li>
 					<li class="li">进出口总额</li>
 					<li class="li">GDP增加值</li>
 					<li class="li">上市公司增长数</li>
-					<li class="li" style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额增加值</li>
+					<li class="li" style="grid-column: 3/5;">社会消费品零售总额增加值</li>
 					<li class="li">固定资产投资额</li>
 					<li class="li">一般公共预算收入</li>
 				</ul>
@@ -68,8 +68,6 @@
 		</div>
 		<canvas id="animate" style="position: absolute; top: 0; z-index: -1;"></canvas>
 	</div>
-	
-	<div class="content-load"><div class="loading"><p>loading</p><span></span></div></div>
 	<!-- <script src="./unit/animate.js"></script> -->
 	<script src="./unit/bg-anim.js"></script>
 	<script src="https://cdn.staticfile.org/echarts/4.5.0/echarts.min.js"></script>
@@ -89,10 +87,8 @@
 				console.log(document.readyState)
 				if (document.readyState == 'complete') //当页面加载状态 
 				{
-					$('.content-load').hide()
 					$('.vor').show()
 				} else {
-					$('.content-load').show()
 					$('.vor').hide()
 				}
 			}

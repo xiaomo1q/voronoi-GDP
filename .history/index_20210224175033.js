@@ -426,6 +426,24 @@ $(function () {
             top: "5.5%",
             left: '14.4%',
             layoutSize: "100%",
+            label: {
+              normal: {
+                show: true,
+                textStyle: {
+                  // color: "rgba(130,198,255,1)",
+                  color: "#000",
+                  fontSize: 16,
+                }
+              },
+              emphasis: {
+                show: true,
+                textStyle: {
+                  // color: "rgba(130,198,255,1)",
+                  color: "#000",
+                  fontSize: 18,
+                }
+              }
+            },
             itemStyle: {
               normal: {
                 areaColor: "transparent",

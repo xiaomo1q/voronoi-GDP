@@ -440,6 +440,7 @@ $(function () {
               emphasis: {
                 areaColor: 'transparent', //悬浮区背景
                 borderColor: 'transparent',
+
               }
             }
           }],
