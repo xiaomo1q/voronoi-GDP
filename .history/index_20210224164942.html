@@ -22,7 +22,7 @@
 </style>
 
 <body>
-	<div class="vor">
+	<div>
 		<header>
 			<div class="header"><span style="font-size: 22px;">2020年长江三角洲41市GDP足球图</span></div>
 		</header>
@@ -83,17 +83,6 @@
 	<script type="text/javascript" src="./index.js"></script>
 	<script>
 		$(function () {
-			document.onreadystatechange = subSomething; //当页面加载状态改变的时候执行这个方法. 
-			subSomething()
-
-			function subSomething() {
-				if (document.readyState == 'complete') //当页面加载状态 
-				{
-					$('.vor').show()
-				} else {
-					$('.vor').hide()
-				}
-			}
 			let num = 1
 			// jwxTest()
 			mapChart.amap(data1, JSON.retrocycle(dataLine))

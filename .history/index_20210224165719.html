@@ -22,7 +22,7 @@
 </style>
 
 <body>
-	<div class="vor">
+	<div>
 		<header>
 			<div class="header"><span style="font-size: 22px;">2020年长江三角洲41市GDP足球图</span></div>
 		</header>
@@ -87,12 +87,13 @@
 			subSomething()
 
 			function subSomething() {
-				if (document.readyState == 'complete') //当页面加载状态 
-				{
-					$('.vor').show()
-				} else {
-					$('.vor').hide()
-				}
+				// if (document.readyState == 'complete') //当页面加载状态 
+				// {
+				// 	$('.weui-loadmore').hide()
+				// } else {
+				// 	$('.weui-loadmore').show()
+				// }
+				console.log(document.readyState)
 			}
 			let num = 1
 			// jwxTest()
