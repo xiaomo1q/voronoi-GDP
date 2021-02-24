@@ -16,7 +16,7 @@ setSizes();
 const HOLE = {
     x: screenWidth / 2,
     y: screenHeight / 2,
-    r: smallerSize / 9
+    r: smallerSize / 4
 };
 
 class Star {
