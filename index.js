@@ -173,14 +173,14 @@ $(function () {
           $('.title-con h5 p').text(i.data.name)
           $('.title-con h4 span').text(Number(i.data.value))
           $('.title-con .cir').css({
-            "color": i.data.border
+            "color": i.data.color
           })
           $('.title-con').css({
             "left": i.x + 50,
             "top": i.y + 50
           })
           $('.border-line').css({
-            "border-color": i.data.border
+            "border-color": i.data.color
           })
 
 
