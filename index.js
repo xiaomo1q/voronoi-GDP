@@ -1,48 +1,48 @@
 var mapChart;
 $(function () {
-   //begin: constants
-   var _2PI = 2 * Math.PI;
-   //end: constants
+  //begin: constants
+  var _2PI = 2 * Math.PI;
+  //end: constants
 
-   //begin: layout conf.
-   var svgWidth = 700,
-   svgHeight = 520,
-   margin = {
-       top: 12,
-       right:25,
-       bottom: 10,
-       left: 10
-   },
-   height = svgHeight - margin.top - margin.bottom,
-   width = svgWidth - margin.left - margin.right,
-   halfWidth = width / 1.5,
-   halfHeight = height / 2,
-   titleY = 20,
-   legendsMinY = height - 0,
-   treemapRadius = 220,
-   treemapCenter = [halfWidth, halfHeight + 5];
-   //end: layout conf.
+  //begin: layout conf.
+  var svgWidth = 700,
+    svgHeight = 520,
+    margin = {
+      top: 12,
+      right: 25,
+      bottom: 10,
+      left: 10
+    },
+    height = svgHeight - margin.top - margin.bottom,
+    width = svgWidth - margin.left - margin.right,
+    halfWidth = width / 1.5,
+    halfHeight = height / 2,
+    titleY = 20,
+    legendsMinY = height - 0,
+    treemapRadius = 220,
+    treemapCenter = [halfWidth, halfHeight + 5];
+  //end: layout conf.
 
-   //begin: treemap conf.
-   var _voronoiTreemap = d3.voronoiTreemap();
-   var hierarchy, circlingPolygon;
-   //end: treemap conf.
+  //begin: treemap conf.
+  var _voronoiTreemap = d3.voronoiTreemap();
+  var hierarchy, circlingPolygon;
+  //end: treemap conf.
 
-   //begin: drawing conf.
-   var fontScale = d3.scaleLinear();
-   //end: drawing conf.
+  //begin: drawing conf.
+  var fontScale = d3.scaleLinear();
+  //end: drawing conf.
 
-   //begin: reusable d3Selection
-   var svg, drawingArea, treemapContainer;
-   //end: reusable d3Selection
+  //begin: reusable d3Selection
+  var svg, drawingArea, treemapContainer;
+  //end: reusable d3Selection
 
 
-   var leaves;
-   var menus = [];
+  var leaves;
+  var menus = [];
 
-   var imageDom = document.createElement('img'); // 使用 DOM HTMLImageElement
-        // imageDom.src = 'http://39.106.255.75/siteimg/e195b1cbd888b6b983397c013047e3c.png';
-        imageDom.src = './img/s.png';
+  //  var imageDom = document.createElement('img'); // 使用 DOM HTMLImageElement
+  var imageDom = new Image(); // 使用 DOM HTMLImageElement
+  imageDom.src = './img/s.png';
   mapChart = {
     amap: function (amapData, dataList) {
 
@@ -66,7 +66,7 @@ $(function () {
 
       }
 
-     
+
       function initData(rootData) {
         circlingPolygon = computeCirclingPolygon(treemapRadius);
         // 此处调节字体缩放比例
@@ -89,9 +89,9 @@ $(function () {
       // 中间足球
       function drawTreemap(hierarchy) {
         // leaves = JSON.retrocycle(dataLine) //json转换为数组
-       
+
         leaves = dataList //json转换为数组
-        
+
         var cells = treemapContainer.append("g")
           .classed('cells', true)
           .attr("transform", "translate(" + [-treemapRadius, -treemapRadius] + ")")
@@ -139,12 +139,12 @@ $(function () {
         cells.on('mouseover', function (d, i) {
           d3.selectAll('.legend-color').attr("width", 120).style("stroke", "transparent").style("stroke-width", "0px")
           let that = this
-          if(i.data.ring=="非都市圈城市"){
+          if (i.data.ring == "非都市圈城市") {
             d3.select(that).style("fill", i.data.color).style("fill-opacity", 0.3)
-            .style("stroke", "#fff").style("stroke-width", '2px')
-          }else{
+              .style("stroke", "#fff").style("stroke-width", '2px')
+          } else {
             d3.select(that).style("fill", i.data.color).style("fill-opacity", 1)
-            .style("stroke", "#fff").style("stroke-width", '2px')
+              .style("stroke", "#fff").style("stroke-width", '2px')
           }
           $('.title-con').show()
           $('.title-con .cir').text(i.data.ring)
@@ -168,14 +168,14 @@ $(function () {
         hoverers.on('mousemove', function (d, i) {
           d3.selectAll('.legend-color').attr("width", 120).style("stroke", "transparent").style("stroke-width", "0px")
           let that = this
-          if(i.data.ring=="非都市圈城市"){
+          if (i.data.ring == "非都市圈城市") {
             d3.select(that).style("fill", i.data.color).style("fill-opacity", 0.3)
-            .style("stroke", "#fff").style("stroke-width", '2px')
-          }else{
+              .style("stroke", "#fff").style("stroke-width", '2px')
+          } else {
             d3.select(that).style("fill", i.data.color).style("fill-opacity", 1)
-            .style("stroke", "#fff").style("stroke-width", '2px')
+              .style("stroke", "#fff").style("stroke-width", '2px')
           }
-          
+
           $('.title-con').show()
           $('.title-con .cir').text(i.data.ring)
           $('.title-con h5 span').text(i.parent.data.name)
@@ -221,8 +221,8 @@ $(function () {
           .classed("legended", true)
           .attr("transform", "translate(" + [-0, legendsMinY - 170] + ")")
 
-          continents.sort((a, b) => {
-            return b.id - a.id;
+        continents.sort((a, b) => {
+          return b.id - a.id;
         });
         var legends = legendContainer.selectAll(".legend")
           .data(continents)
@@ -277,7 +277,6 @@ $(function () {
               }
             } else {
               if (i.border == list[k].data.border) {
-                console.log(list[k].data.name)
                 ringData.push(list[k])
               }
             }
@@ -291,12 +290,13 @@ $(function () {
             .attr("d", function (b) {
               return "M" + b.polygon.join(",") + "z"
             })
-            .style("fill", function (b) {
-              return b.data.color
-            })
+            // .style("fill", function (b) {
+            //   return b.data.color
+            // })
+             .style("fill",i.color)
             .style("fill-opacity", 0.85)
             // .style("stroke", i.color)
-            .style("stroke",'#fff')
+            .style("stroke", '#fff')
             .style("stroke-width", 2 + "px")
         })
 
@@ -314,7 +314,7 @@ $(function () {
         labels.append("text")
           .classed("name", true)
           .text(function (d) {
-            return (d.data.value >0.00 ) ? d.data.name: "";
+            return (d.data.value > 0.00) ? d.data.name : "";
             // return d.data.name;
           }).style("font-size", function (d) {
             return Number(d.data.value) + 5.5;
@@ -322,7 +322,7 @@ $(function () {
       }
       // 右边地图
       function addressMap(list, hover) {
-        
+
         var myChart = echarts.init(document.getElementById('triangle'));
         echarts.registerMap('长三角', mapAdress);
         var series = [{
@@ -487,10 +487,9 @@ $(function () {
               return "M" + b.polygon.join(",") + "z"
             })
             .style("fill", function (b) {
-              console.log(b)
               return b.parent.data.color
             })
-            .style("fill-opacity", 1)
+            .style("fill-opacity", 0.85)
             .style("stroke", "#fff")
             .style("stroke-width", 3 + "px")
 
@@ -499,7 +498,7 @@ $(function () {
 
       }
 
-      
+
       function jwxTest() {
         rootData = amapData;
         initData();
