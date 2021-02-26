@@ -56,16 +56,12 @@
 				<ul>
 					<li class="active li">GDP</li>
 					<li class="li">上市公司数量</li>
-					<li class="li"
-						style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">
-						社会消费品零售总额</li>
+					<li class="li" style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额</li>
 					<li class="li">实际利用外资</li>
 					<li class="li">进出口总额</li>
 					<li class="li">GDP增加值</li>
 					<li class="li">上市公司增长数</li>
-					<li class="li"
-						style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">
-						社会消费品零售总额增加值</li>
+					<li class="li" style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额增加值</li>
 					<li class="li">固定资产投资额</li>
 					<li class="li">一般公共预算收入</li>
 				</ul>
@@ -73,12 +69,8 @@
 		</div>
 		<!-- <canvas id="animate" style="position: absolute; top: 0; z-index: -1;"></canvas> -->
 	</div>
-
-	<div class="content-load">
-		<div class="loading">
-			<p>loading</p><span></span>
-		</div>
-	</div>
+	
+	<div class="content-load"><div class="loading"><p>loading</p><span></span></div></div>
 	<!-- <script src="./unit/animate.js"></script> -->
 	<!-- <script src="./unit/bg-anim.js"></script> -->
 	<script src="https://cdn.staticfile.org/echarts/4.5.0/echarts.min.js"></script>
@@ -105,7 +97,7 @@
 					$('.vor').hide()
 				}
 			}
-			let num =0
+			let num = 1
 			// jwxTest()
 			mapChart.amap(data1, JSON.retrocycle(dataLine))
 			// mapChart.amap(data6, JSON.retrocycle(dataLine6))
@@ -113,7 +105,7 @@
 			$('.left').click(function () {
 				if (num > 0) {
 					$('.treemap-container').empty()
-					$('.legended').empty()
+				$('.legended').empty()
 					num = num - 1
 					if (num == 1) {
 						mapChart.amap(data1, dataLine)
@@ -198,10 +190,9 @@
 			})
 
 			$('.right').click(function () {
-				console.log(num)
-				if (num < 10) {
-					$('.treemap-container').empty()
-					$('.legended').empty()
+				$('.treemap-container').empty()
+				$('.legended').empty()
+				if (num < 9) {
 					num = num + 1
 					if (num == 1) {
 						mapChart.amap(data1, dataLine)

@@ -146,27 +146,6 @@ $(function () {
             d3.select(that).style("fill", i.data.color).style("fill-opacity", 1)
               .style("stroke", "#fff").style("stroke-width", '2px')
           }
-          if(i.data.name == "宁波市" || i.data.name == "舟山市"){
-            $('.title-con .copy').text('宁波都市圈')
-            $('.title-con .copy').css({
-              "color": i.data.color
-            })
-          }
-          else if(i.data.name == "嘉兴市" || i.data.name == "湖州市"){
-            $('.title-con .copy').text('杭州都市圈')
-            $('.title-con .copy').css({
-              "color": i.data.color
-            })
-          } 
-          else if(i.data.name == "滁州市" || i.data.name == "马鞍山市"|| i.data.name == "芜湖市"){
-            $('.title-con .copy').text('合肥都市圈')
-            $('.title-con .copy').css({
-              "color": i.data.color
-            })
-          } else{
-            $('.title-con .copy').text('')
-          }
-
           $('.title-con').show()
           $('.title-con .cir').text(i.data.ring)
           $('.title-con h5 span').text(i.parent.data.name)
@@ -197,25 +176,8 @@ $(function () {
               .style("stroke", "#fff").style("stroke-width", '2px')
           }
 
-          if(i.data.name == "宁波市" || i.data.name == "舟山市"){
-            $('.title-con .copy').text('宁波都市圈')
-            $('.title-con .copy').css({
-              "color": i.data.color
-            })
-          }
-          else if(i.data.name == "嘉兴市" || i.data.name == "湖州市"){
-            $('.title-con .copy').text('杭州都市圈')
-            $('.title-con .copy').css({
-              "color": i.data.color
-            })
-          } 
-          else if(i.data.name == "滁州市" || i.data.name == "马鞍山市"|| i.data.name == "芜湖市"){
-            $('.title-con .copy').text('合肥都市圈')
-            $('.title-con .copy').css({
-              "color": i.data.color
-            })
-          } else{
-            $('.title-con .copy').text('')
+          if(i.data.name == "宁波市"){
+            
           }
 
           $('.title-con').show()
@@ -224,7 +186,7 @@ $(function () {
           $('.title-con h5 p').text(i.data.name)
           $('.title-con h4 span').text(Number(i.data.value))
           $('.title-con .cir').css({
-            "color": i.data.border
+            "color": i.data.color
           })
           $('.title-con').css({
             "left": i.x + 50,

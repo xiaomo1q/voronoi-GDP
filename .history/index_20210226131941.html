@@ -105,7 +105,7 @@
 					$('.vor').hide()
 				}
 			}
-			let num =0
+			let num = 1
 			// jwxTest()
 			mapChart.amap(data1, JSON.retrocycle(dataLine))
 			// mapChart.amap(data6, JSON.retrocycle(dataLine6))
@@ -198,8 +198,8 @@
 			})
 
 			$('.right').click(function () {
-				console.log(num)
-				if (num < 10) {
+				if (num < 11) {
+
 					$('.treemap-container').empty()
 					$('.legended').empty()
 					num = num + 1
