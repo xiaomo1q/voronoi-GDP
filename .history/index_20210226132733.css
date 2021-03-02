@@ -616,12 +616,3 @@ h4 {
 		width: 16px;
 	}
 }
-
-.gao-bg{
-	width: 439px;
-    height: 440px;
-    margin: auto;
-    margin-top: 39px;
-background: url('./img/Ellipse.png') no-repeat;
-background-size: 100% 100%;
-}
