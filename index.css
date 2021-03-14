@@ -13,7 +13,7 @@ html {
 }
 
 @media screen and (min-width: 1600px) {
-	.bodys {
+	body {
 		zoom: 90%;
 		width: 1980px !important;
 		height: 1080px !important;
@@ -175,7 +175,7 @@ h4 {
 }
 
 .call ul {
-	width: 720px;
+	width: 960px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 120px);
 	padding: 0;
@@ -617,11 +617,11 @@ h4 {
 	}
 }
 
-.gao-bg{
-	width: 439px;
-    height: 440px;
-    margin: auto;
-    margin-top: 39px;
-background: url('./img/Ellipse.png') no-repeat;
-background-size: 100% 100%;
+.gao-bg {
+	width: 442px;
+	height: 442px;
+	margin: auto;
+	margin-top: 37px;
+	background: url('./img/Ellipse.png') no-repeat;
+	background-size: 100% 100%;
 }

@@ -60,11 +60,15 @@
 					<li class="li" style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额</li>
 					<li class="li">实际利用外资</li>
 					<li class="li">进出口总额</li>
+					<li class="li">各市企业数</li>
+					<li class="li">高新技术企业</li>
 					<li class="li">GDP增加值</li>
 					<li class="li">上市公司增长数</li>
 					<li class="li" style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额增加值</li>
 					<li class="li">固定资产投资额</li>
 					<li class="li">一般公共预算收入</li>
+					<li class="li">各市新增企业数</li>
+					<li class="li">新增高新技术企业</li>
 				</ul>
 			</div>
 		</div>
@@ -82,6 +86,7 @@
 	<script src="./js/data.js"> </script>
 	<script src="./js/dataJson.js"> </script>
 	<script src="./js/dataJson2.js"> </script>
+	<script src="./js/dataJson3.js"> </script>
 	<script src="./js/address.js"> </script>
 	<script src="./unit/json2.js"></script>
 	<script src="./unit/cycle.js"></script>
@@ -150,6 +155,22 @@
 						$('header span').text('2020年长江三角洲各市进出口总额占比')
 					}
 					if (num == 6) {
+						if (dataLine11[5].data) {
+							mapChart.amap(data11, dataLine11)
+						} else {
+							mapChart.amap(data11, JSON.retrocycle(dataLine11))
+						}
+						$('header span').text('2020年长江三角洲各市企业数占比')
+					}
+					if (num == 7) {
+						if (dataLine12[5].data) {
+							mapChart.amap(data12, dataLine12)
+						} else {
+							mapChart.amap(data12, JSON.retrocycle(dataLine12))
+						}
+						$('header span').text('2020年长江三角洲各市高新技术企业数量占比')
+					}
+					if (num == 8) {
 						if (dataLine2[5].data) {
 							mapChart.amap(data2, dataLine2)
 						} else {
@@ -157,7 +178,7 @@
 						}
 						$('header span').text('2020年长江三角洲GDP增加值足球图')
 					}
-					if (num == 7) {
+					if (num == 9) {
 						if (dataLine4[5].data) {
 							mapChart.amap(data4, dataLine4)
 						} else {
@@ -165,7 +186,7 @@
 						}
 						$('header span').text('2020年长江三角洲各市上市公司增长数占比')
 					}
-					if (num == 8) {
+					if (num == 10) {
 						if (dataLine6[5].data) {
 							mapChart.amap(data6, dataLine6)
 						} else {
@@ -173,7 +194,7 @@
 						}
 						$('header span').text('2020年长江三角洲各市社会消费品零售总额增加值占比')
 					}
-					if (num == 9) {
+					if (num == 11) {
 						if (dataLine9[5].data) {
 							mapChart.amap(data9, dataLine9)
 						} else {
@@ -181,7 +202,7 @@
 						}
 						$('header span').text('2020年长江三角洲各市固定资产投资额占比')
 					}
-					if (num == 10) {
+					if (num == 12) {
 						if (dataLine10[5].data) {
 							mapChart.amap(data10, dataLine10)
 						} else {
@@ -189,13 +210,29 @@
 						}
 						$('header span').text('2020年长江三角洲各市一般公共预算收入占比')
 					}
+					if (num == 13) {
+						if (dataLine13[5].data) {
+							mapChart.amap(data13, dataLine13)
+						} else {
+							mapChart.amap(data13, JSON.retrocycle(dataLine13))
+						}
+						$('header span').text('2020年长江三角洲各市新增企业数占比')
+					}
+					if (num == 14) {
+						if (dataLine14[5].data) {
+							mapChart.amap(data14, dataLine14)
+						} else {
+							mapChart.amap(data14, JSON.retrocycle(dataLine14))
+						}
+						$('header span').text('2020年长江三角洲各市新增高新技术企业数量占比')
+					}
 					$('ul li').removeClass("active")
 					$(`.li:eq(${num-1})`).addClass('active');
 				}
 			})
 
 			$('.right').click(function () {
-				if (num < 10) {
+				if (num < 14) {
 					$('.treemap-container').empty()
 					$('.legended').empty()
 					num = num + 1
@@ -237,6 +274,22 @@
 						$('header span').text('2020年长江三角洲各市进出口总额占比')
 					}
 					if (num == 6) {
+						if (dataLine11[5].data) {
+							mapChart.amap(data11, dataLine11)
+						} else {
+							mapChart.amap(data11, JSON.retrocycle(dataLine11))
+						}
+						$('header span').text('2020年长江三角洲各市企业数占比')
+					}
+					if (num == 7) {
+						if (dataLine12[5].data) {
+							mapChart.amap(data12, dataLine12)
+						} else {
+							mapChart.amap(data12, JSON.retrocycle(dataLine12))
+						}
+						$('header span').text('2020年长江三角洲各市高新技术企业数量占比')
+					}
+					if (num == 8) {
 						if (dataLine2[5].data) {
 							mapChart.amap(data2, dataLine2)
 						} else {
@@ -244,7 +297,7 @@
 						}
 						$('header span').text('2020年长江三角洲GDP增加值足球图')
 					}
-					if (num == 7) {
+					if (num == 9) {
 						if (dataLine4[5].data) {
 							mapChart.amap(data4, dataLine4)
 						} else {
@@ -252,7 +305,7 @@
 						}
 						$('header span').text('2020年长江三角洲各市上市公司增长数占比')
 					}
-					if (num == 8) {
+					if (num == 10) {
 						if (dataLine6[5].data) {
 							mapChart.amap(data6, dataLine6)
 						} else {
@@ -260,7 +313,7 @@
 						}
 						$('header span').text('2020年长江三角洲各市社会消费品零售总额增加值占比')
 					}
-					if (num == 9) {
+					if (num == 11) {
 						if (dataLine9[5].data) {
 							mapChart.amap(data9, dataLine9)
 						} else {
@@ -268,13 +321,29 @@
 						}
 						$('header span').text('2020年长江三角洲各市固定资产投资额占比')
 					}
-					if (num == 10) {
+					if (num == 12) {
 						if (dataLine10[5].data) {
 							mapChart.amap(data10, dataLine10)
 						} else {
 							mapChart.amap(data10, JSON.retrocycle(dataLine10))
 						}
 						$('header span').text('2020年长江三角洲各市一般公共预算收入占比')
+					}
+					if (num == 13) {
+						if (dataLine13[5].data) {
+							mapChart.amap(data13, dataLine13)
+						} else {
+							mapChart.amap(data13, JSON.retrocycle(dataLine13))
+						}
+						$('header span').text('2020年长江三角洲各市新增企业数占比')
+					}
+					if (num == 14) {
+						if (dataLine14[5].data) {
+							mapChart.amap(data14, dataLine14)
+						} else {
+							mapChart.amap(data14, JSON.retrocycle(dataLine14))
+						}
+						$('header span').text('2020年长江三角洲各市新增高新技术企业数量占比')
 					}
 					$('ul li').removeClass("active")
 					$(`.li:eq(${num-1})`).addClass('active');
@@ -370,13 +439,50 @@
 				}
 				if ($(this).text() == "一般公共预算收入") {
 					num = 10
-					// mapChart.amap(data10, JSON.retrocycle(dataLine10))
 					if (dataLine10[5].data) {
 						mapChart.amap(data10, dataLine10)
 					} else {
 						mapChart.amap(data10, JSON.retrocycle(dataLine10))
 					}
 					$('header span').text('2020年长江三角洲各市一般公共预算收入占比')
+				}
+				if ($(this).text() == "各市企业数") {
+					num = 6
+					if (dataLine11[5].data) {
+						mapChart.amap(data11, dataLine11)
+					} else {
+						mapChart.amap(data11, JSON.retrocycle(dataLine11))
+					}
+					$('header span').text('2020年长江三角洲各市企业数占比')
+				}
+				if ($(this).text() == "高新技术企业") {
+					num = 7
+					if (dataLine12[5].data) {
+						mapChart.amap(data12, dataLine12)
+					} else {
+						mapChart.amap(data12, JSON.retrocycle(dataLine12))
+					}
+					$('header span').text('2020年长江三角洲各市高新技术企业数量占比')
+				}
+				if ($(this).text() == "各市新增企业数") {
+					num = 13
+					// mapChart.amap(data9, JSON.retrocycle(dataLine9))
+					if (dataLine13[5].data) {
+						mapChart.amap(data13, dataLine13)
+					} else {
+						mapChart.amap(data13, JSON.retrocycle(dataLine13))
+					}
+					$('header span').text('2020年长江三角洲各市新增企业数占比')
+				}
+				if ($(this).text() == "新增高新技术企业") {
+					num = 14
+					// mapChart.amap(data10, JSON.retrocycle(dataLine10))
+					if (dataLine14[5].data) {
+						mapChart.amap(data14, dataLine14)
+					} else {
+						mapChart.amap(data14, JSON.retrocycle(dataLine14))
+					}
+					$('header span').text('2020年长江三角洲各市新增高新技术企业数量占比')
 				}
 			})
 		})
