@@ -169,7 +169,8 @@ $(function () {
 
           $('.title-con').show()
           $('.title-con .cir').text(i.data.ring)
-          $('.title-con .zh-b span').text($('ul .active').text())
+          $('.title-con .zh-b span').text(zText)
+          console.log(zText)
           $('.title-con h5 span').text(i.parent.data.name)
           $('.title-con h5 p').text(i.data.name)
           $('.title-con h4 span').text(Number(i.data.value))
@@ -221,8 +222,6 @@ $(function () {
 
           $('.title-con').show()
           $('.title-con .cir').text(i.data.ring)
-          // $('.title-con .zh-b span').text(zText)
-          $('.title-con .zh-b span').text($('ul .active').text())
           $('.title-con h5 span').text(i.parent.data.name)
           $('.title-con h5 p').text(i.data.name)
           $('.title-con h4 span').text(Number(i.data.value))

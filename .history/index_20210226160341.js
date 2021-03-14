@@ -44,7 +44,7 @@ $(function () {
   var imageDom = new Image(); // 使用 DOM HTMLImageElement
   imageDom.src = './img/s.png';
   mapChart = {
-    amap: function (amapData, dataList,zText) {
+    amap: function (amapData, dataList) {
 
       function initLayout(rootData) {
         svg = d3.select("svg")
@@ -169,7 +169,6 @@ $(function () {
 
           $('.title-con').show()
           $('.title-con .cir').text(i.data.ring)
-          $('.title-con .zh-b span').text($('ul .active').text())
           $('.title-con h5 span').text(i.parent.data.name)
           $('.title-con h5 p').text(i.data.name)
           $('.title-con h4 span').text(Number(i.data.value))
@@ -221,8 +220,6 @@ $(function () {
 
           $('.title-con').show()
           $('.title-con .cir').text(i.data.ring)
-          // $('.title-con .zh-b span').text(zText)
-          $('.title-con .zh-b span').text($('ul .active').text())
           $('.title-con h5 span').text(i.parent.data.name)
           $('.title-con h5 p').text(i.data.name)
           $('.title-con h4 span').text(Number(i.data.value))

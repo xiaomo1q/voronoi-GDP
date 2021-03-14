@@ -37,7 +37,7 @@
 								</h5>
 							</div>
 							<div style="padding: 0 1px;">
-								<p style="color:#fff" class="zh-b"><span>GDP</span>占比</p>
+								<p style="color:#fff">GDP占比</p>
 								<h4><span>8.17</span>%</h4>
 							</div>
 						</div>
@@ -109,7 +109,8 @@
 			}
 			let num =0
 			// jwxTest()
-			mapChart.amap(data1, JSON.retrocycle(dataLine),"GDP")
+			mapChart.amap(data1, JSON.retrocycle(dataLine))
+			// mapChart.amap(data6, JSON.retrocycle(dataLine6))
 
 			$('.left').click(function () {
 				if (num > 0) {

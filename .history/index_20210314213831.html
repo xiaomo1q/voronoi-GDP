@@ -37,7 +37,7 @@
 								</h5>
 							</div>
 							<div style="padding: 0 1px;">
-								<p style="color:#fff" class="zh-b"><span>GDP</span>占比</p>
+								<p style="color:#fff">GDP占比</p>
 								<h4><span>8.17</span>%</h4>
 							</div>
 						</div>
@@ -109,7 +109,8 @@
 			}
 			let num =0
 			// jwxTest()
-			mapChart.amap(data1, JSON.retrocycle(dataLine),"GDP")
+			mapChart.amap(data1, JSON.retrocycle(dataLine))
+			// mapChart.amap(data6, JSON.retrocycle(dataLine6))
 
 			$('.left').click(function () {
 				if (num > 0) {
@@ -363,18 +364,18 @@
 				if ($(this).text() == "上市公司数量") {
 					num = 2
 					if (dataLine3[5].data) {
-						mapChart.amap(data3, dataLine3,$(this).text())
+						mapChart.amap(data3, dataLine3)
 					} else {
-						mapChart.amap(data3, JSON.retrocycle(dataLine3),$(this).text())
+						mapChart.amap(data3, JSON.retrocycle(dataLine3))
 					}
 					$('header span').text('2020年长江三角洲各市上市公司数量占比')
 				}
 				if ($(this).text() == "社会消费品零售总额") {
 					num = 3
 					if (dataLine5[5].data) {
-						mapChart.amap(data5, dataLine5,$(this).text())
+						mapChart.amap(data5, dataLine5)
 					} else {
-						mapChart.amap(data5, JSON.retrocycle(dataLine5),$(this).text())
+						mapChart.amap(data5, JSON.retrocycle(dataLine5))
 					}
 					// mapChart.amap(data5, JSON.retrocycle(dataLine5))
 					$('header span').text('2020年长江三角洲各市社会消费品零售总额占比')
@@ -382,27 +383,27 @@
 				if ($(this).text() == "实际利用外资") {
 					num = 4
 					if (dataLine7[5].data) {
-						mapChart.amap(data7, dataLine7,$(this).text())
+						mapChart.amap(data7, dataLine7)
 					} else {
-						mapChart.amap(data7, JSON.retrocycle(dataLine7),$(this).text())
+						mapChart.amap(data7, JSON.retrocycle(dataLine7))
 					}
 					$('header span').text('2020年长江三角洲各市实际利用外资占比')
 				}
 				if ($(this).text() == "进出口总额") {
 					num = 5
 					if (dataLine8[5].data) {
-						mapChart.amap(data8, dataLine8,$(this).text())
+						mapChart.amap(data8, dataLine8)
 					} else {
-						mapChart.amap(data8, JSON.retrocycle(dataLine8),$(this).text())
+						mapChart.amap(data8, JSON.retrocycle(dataLine8))
 					}
 					$('header span').text('2020年长江三角洲各市进出口总额占比')
 				}
 				if ($(this).text() == "GDP增加值") {
 					num = 6
 					if (dataLine2[5].data) {
-						mapChart.amap(data2, dataLine2,$(this).text())
+						mapChart.amap(data2, dataLine2)
 					} else {
-						mapChart.amap(data2, JSON.retrocycle(dataLine2),$(this).text())
+						mapChart.amap(data2, JSON.retrocycle(dataLine2))
 					}
 					$('header span').text('2020年长江三角洲GDP增加值足球图')
 				}
@@ -410,9 +411,9 @@
 					num = 7
 					// mapChart.amap(data4, JSON.retrocycle(dataLine4))
 					if (dataLine4[5].data) {
-						mapChart.amap(data4, dataLine4,$(this).text())
+						mapChart.amap(data4, dataLine4)
 					} else {
-						mapChart.amap(data4, JSON.retrocycle(dataLine4),$(this).text())
+						mapChart.amap(data4, JSON.retrocycle(dataLine4))
 					}
 					$('header span').text('2020年长江三角洲各市上市公司增长数占比')
 				}
@@ -420,9 +421,9 @@
 					num = 8
 					// mapChart.amap(data6, JSON.retrocycle(dataLine6))
 					if (dataLine6[5].data) {
-						mapChart.amap(data6, dataLine6,$(this).text())
+						mapChart.amap(data6, dataLine6)
 					} else {
-						mapChart.amap(data6, JSON.retrocycle(dataLine6),$(this).text())
+						mapChart.amap(data6, JSON.retrocycle(dataLine6))
 					}
 					$('header span').text('2020年长江三角洲各市社会消费品零售总额增加值占比')
 				}
@@ -430,36 +431,36 @@
 					num = 9
 					// mapChart.amap(data9, JSON.retrocycle(dataLine9))
 					if (dataLine9[5].data) {
-						mapChart.amap(data9, dataLine9,$(this).text())
+						mapChart.amap(data9, dataLine9)
 					} else {
-						mapChart.amap(data9, JSON.retrocycle(dataLine9),$(this).text())
+						mapChart.amap(data9, JSON.retrocycle(dataLine9))
 					}
 					$('header span').text('2020年长江三角洲各市固定资产投资额占比')
 				}
 				if ($(this).text() == "一般公共预算收入") {
 					num = 10
 					if (dataLine10[5].data) {
-						mapChart.amap(data10, dataLine10,$(this).text())
+						mapChart.amap(data10, dataLine10)
 					} else {
-						mapChart.amap(data10, JSON.retrocycle(dataLine10),$(this).text())
+						mapChart.amap(data10, JSON.retrocycle(dataLine10))
 					}
 					$('header span').text('2020年长江三角洲各市一般公共预算收入占比')
 				}
 				if ($(this).text() == "各市企业数") {
 					num = 6
 					if (dataLine11[5].data) {
-						mapChart.amap(data11, dataLine11,$(this).text())
+						mapChart.amap(data11, dataLine11)
 					} else {
-						mapChart.amap(data11, JSON.retrocycle(dataLine11),$(this).text())
+						mapChart.amap(data11, JSON.retrocycle(dataLine11))
 					}
 					$('header span').text('2020年长江三角洲各市企业数占比')
 				}
 				if ($(this).text() == "高新技术企业") {
 					num = 7
 					if (dataLine12[5].data) {
-						mapChart.amap(data12, dataLine12,$(this).text())
+						mapChart.amap(data12, dataLine12)
 					} else {
-						mapChart.amap(data12, JSON.retrocycle(dataLine12),$(this).text())
+						mapChart.amap(data12, JSON.retrocycle(dataLine12))
 					}
 					$('header span').text('2020年长江三角洲各市高新技术企业数量占比')
 				}
@@ -467,9 +468,9 @@
 					num = 13
 					// mapChart.amap(data9, JSON.retrocycle(dataLine9))
 					if (dataLine13[5].data) {
-						mapChart.amap(data13, dataLine13,$(this).text())
+						mapChart.amap(data13, dataLine13)
 					} else {
-						mapChart.amap(data13, JSON.retrocycle(dataLine13),$(this).text())
+						mapChart.amap(data13, JSON.retrocycle(dataLine13))
 					}
 					$('header span').text('2020年长江三角洲各市新增企业数占比')
 				}
@@ -477,9 +478,9 @@
 					num = 14
 					// mapChart.amap(data10, JSON.retrocycle(dataLine10))
 					if (dataLine14[5].data) {
-						mapChart.amap(data14, dataLine14,$(this).text())
+						mapChart.amap(data14, dataLine14)
 					} else {
-						mapChart.amap(data14, JSON.retrocycle(dataLine14),$(this).text())
+						mapChart.amap(data14, JSON.retrocycle(dataLine14))
 					}
 					$('header span').text('2020年长江三角洲各市新增高新技术企业数量占比')
 				}
