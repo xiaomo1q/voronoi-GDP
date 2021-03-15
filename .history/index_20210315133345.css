@@ -178,7 +178,6 @@ h4 {
 	width: 960px;
 	display: grid;
 	/* grid-template-columns: repeat(auto-fill, 120px); */
-	grid-template-columns:repeat(7,auto);
 	padding: 0;
 	margin: auto;
 }
