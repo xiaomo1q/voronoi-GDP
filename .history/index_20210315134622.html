@@ -57,6 +57,7 @@
 				<ul>
 					<li class="active li">GDP</li>
 					<li class="li">上市公司数量</li>
+					<!-- <li class="li" style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额</li> -->
 					<li class="li" style="background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额</li>
 					<li class="li">实际利用外资</li>
 					<li class="li">进出口总额</li>
@@ -64,6 +65,7 @@
 					<li class="li">高新技术企业</li>
 					<li class="li">GDP增加值</li>
 					<li class="li">上市公司增长数</li>
+					<!-- <li class="li" style="grid-column: 3/5;background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额增加值</li> -->
 					<li class="li" style="background: url('./img/select1.png') no-repeat; background-size: 100% 100%;">社会消费品零售总额增加值</li>
 					<li class="li">固定资产投资额</li>
 					<li class="li">一般公共预算收入</li>
@@ -445,7 +447,7 @@
 					}
 					$('header span').text('2020年长江三角洲各市一般公共预算收入占比')
 				}
-				if ($(this).text() == "企业数") {
+				if ($(this).text() == "各市企业数") {
 					num = 6
 					if (dataLine11[5].data) {
 						mapChart.amap(data11, dataLine11,$(this).text())
@@ -463,7 +465,7 @@
 					}
 					$('header span').text('2020年长江三角洲各市高新技术企业数量占比')
 				}
-				if ($(this).text() == "新增企业数") {
+				if ($(this).text() == "各市新增企业数") {
 					num = 13
 					// mapChart.amap(data9, JSON.retrocycle(dataLine9))
 					if (dataLine13[5].data) {
